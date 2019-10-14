@@ -11,7 +11,7 @@ import androidx.databinding.DataBindingUtil
 import buu.informatics.s59160090.translateit.databinding.FragmentMainPageBinding
 
 class MainPage : Fragment() {
-    private lateinit var binding: FragmentMainPageBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
