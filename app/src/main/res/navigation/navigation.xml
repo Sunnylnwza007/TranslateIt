@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainPage">
+
+    <fragment
+        android:id="@+id/mainPage"
+        android:name="buu.informatics.s59160090.translateit.MainPage"
+        android:label="MainPage"
+        tools:layout="@layout/fragment_main_page">
+        <action
+            android:id="@+id/action_mainPage_to_mainMenuFragment2"
+            app:destination="@id/mainMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainMenuFragment"
+        android:name="buu.informatics.s59160090.translateit.MainMenuFragment"
+        android:label="MainMenuFragment"
+        tools:layout="@layout/fragment_main_menu">
+        <action
+            android:id="@+id/action_mainMenuFragment_to_gameFragment2"
+            app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment_to_scoreFragment2"
+            app:destination="@id/scoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="buu.informatics.s59160090.translateit.GameFragment"
+        android:label="GameFragment"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_gameFragment_to_endFragment2"
+            app:destination="@id/endFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/endFragment"
+        android:name="buu.informatics.s59160090.translateit.EndFragment"
+        android:label="EndFragment"
+        tools:layout="@layout/fragment_end">
+        <action
+            android:id="@+id/action_endFragment_to_mainMenuFragment2"
+            app:destination="@id/mainMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="buu.informatics.s59160090.translateit.ScoreFragment"
+        android:label="ScoreFragment"
+        tools:layout="@layout/fragment_score">
+        <action
+            android:id="@+id/action_scoreFragment_to_mainMenuFragment2"
+            app:destination="@id/mainMenuFragment" />
+    </fragment>
+</navigation>

@@ -70,66 +70,53 @@
 
         <Button
             android:id="@+id/ans1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="181dp"
+            android:layout_height="80dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="48dp"
             android:fontFamily="@font/bungee"
             android:gravity="center"
             android:text="Button"
             android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/qs" />
 
         <Button
             android:id="@+id/ans2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="181dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="8dp"
             android:fontFamily="@font/bungee"
             android:gravity="center"
             android:text="Button"
             android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBaseline_toBaselineOf="@+id/ans1"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/ans3"
+            android:layout_width="182dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/bungee"
+            android:gravity="center"
+            android:text="Button"
+            android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ans1" />
 
         <Button
-            android:id="@+id/ans3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:fontFamily="@font/bungee"
-            android:gravity="center"
-            android:text="Button"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ans2" />
-
-        <Button
             android:id="@+id/ans4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="181dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="8dp"
             android:fontFamily="@font/bungee"
             android:gravity="center"
             android:text="Button"
             android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ans3" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/ans3"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
