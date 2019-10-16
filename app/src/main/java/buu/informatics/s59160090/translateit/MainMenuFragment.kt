@@ -31,7 +31,7 @@ class MainMenuFragment : Fragment() {
 
         }
         binding.aboutButton.setOnClickListener {view : View ->
-            
+
         }
 
         return binding.root
