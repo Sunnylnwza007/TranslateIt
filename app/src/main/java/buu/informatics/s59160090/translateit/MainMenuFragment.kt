@@ -30,9 +30,7 @@ class MainMenuFragment : Fragment() {
             view.findNavController().navigate(R.id.action_mainMenuFragment_to_scoreFragment2)
 
         }
-        binding.aboutButton.setOnClickListener {view : View ->
 
-        }
 
         return binding.root
     }

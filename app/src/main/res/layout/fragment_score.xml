@@ -5,7 +5,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/bg">
 
         <Button
             android:id="@+id/menuButton3"
@@ -30,7 +31,7 @@
             android:fontFamily="@font/bungee"
             android:gravity="center"
             android:text="@string/scoreborad"
-            android:textColor="#D7F13535"
+            android:textColor="#FF5252"
             android:textSize="64sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

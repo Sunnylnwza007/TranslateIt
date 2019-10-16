@@ -5,7 +5,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/bg">
 
         <TextView
             android:id="@+id/textView2"
@@ -15,6 +16,7 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/bungee"
             android:text="@string/time"
+            android:textColor="#FFFDFD"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -27,6 +29,7 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/bungee"
             android:text="60"
+            android:textColor="#FFFDFD"
             android:textSize="24sp"
             app:layout_constraintStart_toEndOf="@+id/textView2"
             app:layout_constraintTop_toTopOf="parent" />
@@ -39,6 +42,7 @@
             android:layout_marginEnd="8dp"
             android:fontFamily="@font/bungee"
             android:text="999"
+            android:textColor="#FFFDFD"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -51,6 +55,7 @@
             android:layout_marginEnd="4dp"
             android:fontFamily="@font/bungee"
             android:text="@string/score"
+            android:textColor="#FFFDFD"
             android:textSize="24sp"
             app:layout_constraintEnd_toStartOf="@+id/score"
             app:layout_constraintTop_toTopOf="parent" />
@@ -63,6 +68,7 @@
             android:fontFamily="@font/bungee"
             android:gravity="center"
             android:text="Question"
+            android:textColor="#FFFDFD"
             android:textSize="52sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -74,9 +80,11 @@
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="48dp"
+            android:background="@android:color/holo_blue_dark"
             android:fontFamily="@font/bungee"
             android:gravity="center"
             android:text="Button"
+            android:textColor="#FFFDFD"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/qs" />
@@ -86,9 +94,11 @@
             android:layout_width="181dp"
             android:layout_height="80dp"
             android:layout_marginEnd="8dp"
+            android:background="@android:color/holo_blue_dark"
             android:fontFamily="@font/bungee"
             android:gravity="center"
             android:text="Button"
+            android:textColor="#FFFDFD"
             android:textSize="24sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/ans1"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -99,9 +109,11 @@
             android:layout_height="80dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
+            android:background="@android:color/holo_blue_dark"
             android:fontFamily="@font/bungee"
             android:gravity="center"
             android:text="Button"
+            android:textColor="#FFFDFD"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ans1" />
@@ -111,9 +123,11 @@
             android:layout_width="181dp"
             android:layout_height="80dp"
             android:layout_marginEnd="8dp"
+            android:background="@android:color/holo_blue_dark"
             android:fontFamily="@font/bungee"
             android:gravity="center"
             android:text="Button"
+            android:textColor="#FFFDFD"
             android:textSize="24sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/ans3"
             app:layout_constraintEnd_toEndOf="parent" />
