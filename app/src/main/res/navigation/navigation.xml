@@ -53,4 +53,8 @@
             android:id="@+id/action_scoreFragment_to_mainMenuFragment2"
             app:destination="@id/mainMenuFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="buu.informatics.s59160090.translateit.AboutFragment"
+        android:label="AboutFragment" />
 </navigation>

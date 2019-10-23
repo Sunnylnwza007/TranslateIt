@@ -11,4 +11,6 @@
     <string name="time">Timer :</string>
     <string name="score">Score :</string>
     <string name="yourScore">Your score is</string>
+    <string name="aboutGame">\t เกมนี้เป็นเกมวัดทักษะภาษาอังกฤษ \n โดยการตอบคำแปลให้ถูกต้อง \n ตามคำศัพท์ที่ให้มา</string>
+    <string name="ok">OK</string>
 </resources>

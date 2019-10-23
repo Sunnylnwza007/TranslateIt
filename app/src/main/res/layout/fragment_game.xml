@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="game"
+            type="buu.informatics.s59160090.translateit.GameFragment" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,7 +35,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/bungee"
-            android:text="60"
+            android:text="@{game.stringTime}"
             android:textColor="#FFFDFD"
             android:textSize="24sp"
             app:layout_constraintStart_toEndOf="@+id/textView2"
@@ -41,7 +48,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:fontFamily="@font/bungee"
-            android:text="999"
+            android:text="@{game.stringScore}"
             android:textColor="#FFFDFD"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -67,7 +74,7 @@
             android:layout_marginTop="36dp"
             android:fontFamily="@font/bungee"
             android:gravity="center"
-            android:text="Question"
+            android:text="@{game.currentQuestion.text}"
             android:textColor="#FFFDFD"
             android:textSize="52sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +90,7 @@
             android:background="@android:color/holo_blue_dark"
             android:fontFamily="@font/bungee"
             android:gravity="center"
-            android:text="Ans1"
+            android:text="@{game.answers[0]}"
             android:textColor="#FFFDFD"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -97,7 +104,7 @@
             android:background="@android:color/holo_blue_dark"
             android:fontFamily="@font/bungee"
             android:gravity="center"
-            android:text="ANS2"
+            android:text="@{game.answers[1]}"
             android:textColor="#FFFDFD"
             android:textSize="24sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/ans1"
@@ -112,7 +119,7 @@
             android:background="@android:color/holo_blue_dark"
             android:fontFamily="@font/bungee"
             android:gravity="center"
-            android:text="ANS3"
+            android:text="@{game.answers[2]}"
             android:textColor="#FFFDFD"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -126,7 +133,7 @@
             android:background="@android:color/holo_blue_dark"
             android:fontFamily="@font/bungee"
             android:gravity="center"
-            android:text="ANS4"
+            android:text="@{game.answers[3]}"
             android:textColor="#FFFDFD"
             android:textSize="24sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/ans3"

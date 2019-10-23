@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="163dp"
+            android:layout_height="157dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/mind2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text4"
+            tools:src="@drawable/mind2" />
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bungee"
+            android:gravity="center"
+            android:text="@string/myApp"
+            android:textColor="#FF5252"
+            android:textSize="64sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="369dp"
+            android:layout_height="166dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/bungee"
+            android:text="@string/aboutGame"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
