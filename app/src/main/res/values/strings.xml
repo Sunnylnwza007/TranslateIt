@@ -13,4 +13,7 @@
     <string name="yourScore">Your score is</string>
     <string name="aboutGame">\t เกมนี้เป็นเกมวัดทักษะภาษาอังกฤษ \n โดยการตอบคำแปลให้ถูกต้อง \n ตามคำศัพท์ที่ให้มา</string>
     <string name="ok">OK</string>
+    <string name="share">Share</string>
+
+    <string name="share_success_text">My score is %1$d in Translate it!! Game</string>
 </resources>

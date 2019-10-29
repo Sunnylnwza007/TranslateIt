@@ -33,7 +33,9 @@
         tools:layout="@layout/fragment_game">
         <action
             android:id="@+id/action_gameFragment_to_endFragment2"
-            app:destination="@id/endFragment" />
+            app:destination="@id/endFragment"
+            app:popUpTo="@+id/mainMenuFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/endFragment"
@@ -42,7 +44,8 @@
         tools:layout="@layout/fragment_end">
         <action
             android:id="@+id/action_endFragment_to_mainMenuFragment2"
-            app:destination="@id/mainMenuFragment" />
+            app:destination="@id/mainMenuFragment"
+            app:popUpToInclusive="false" />
         <argument
             android:name="score"
             app:argType="integer" />
