@@ -43,6 +43,9 @@
         <action
             android:id="@+id/action_endFragment_to_mainMenuFragment2"
             app:destination="@id/mainMenuFragment" />
+        <argument
+            android:name="score"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/scoreFragment"
