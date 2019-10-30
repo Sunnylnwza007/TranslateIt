@@ -40,7 +40,7 @@ class DatabaseHandler(context: FragmentActivity?) :
     fun getAllUsers(): String {
         var allUser: String = "";
         val db = readableDatabase
-        val selectALLQuery = "SELECT * FROM $TABLE_NAME ORDER BY $SCORE DESC"
+        val selectALLQuery = "SELECT * FROM $TABLE_NAME ORDER BY $SCORE DESC LIMIT 8"
         val cursor = db.rawQuery(selectALLQuery, null)
         var num = 1
         if (cursor != null) {
@@ -62,7 +62,7 @@ class DatabaseHandler(context: FragmentActivity?) :
     fun getAllScore(): String {
         var allScore: String = "";
         val db = readableDatabase
-        val selectALLQuery = "SELECT * FROM $TABLE_NAME ORDER BY $SCORE DESC"
+        val selectALLQuery = "SELECT * FROM $TABLE_NAME ORDER BY $SCORE DESC LIMIT 8"
         val cursor = db.rawQuery(selectALLQuery, null)
         var num = 1
         if (cursor != null) {
