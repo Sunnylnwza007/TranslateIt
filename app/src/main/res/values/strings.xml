@@ -16,4 +16,7 @@
     <string name="share">Share</string>
 
     <string name="share_success_text">My score is %1$d in Translate it!! Game</string>
+    <string name="img">Translate</string>
+    <string name="input">Your Name</string>
+    <string name="showScore">Score</string>
 </resources>

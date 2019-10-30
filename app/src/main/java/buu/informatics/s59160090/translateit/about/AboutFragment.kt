@@ -1,4 +1,4 @@
-package buu.informatics.s59160090.translateit
+package buu.informatics.s59160090.translateit.about
 
 
 import android.os.Bundle
@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import buu.informatics.s59160090.translateit.R
 
 /**
  * A simple [Fragment] subclass.

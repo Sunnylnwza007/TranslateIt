@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainPage"
-        android:name="buu.informatics.s59160090.translateit.MainPage"
+        android:name="buu.informatics.s59160090.translateit.main.MainPage"
         android:label="MainPage"
         tools:layout="@layout/fragment_main_page">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainMenuFragment"
-        android:name="buu.informatics.s59160090.translateit.MainMenuFragment"
+        android:name="buu.informatics.s59160090.translateit.main.MainMenuFragment"
         android:label="MainMenuFragment"
         tools:layout="@layout/fragment_main_menu">
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
-        android:name="buu.informatics.s59160090.translateit.GameFragment"
+        android:name="buu.informatics.s59160090.translateit.game.GameFragment"
         android:label="GameFragment"
         tools:layout="@layout/fragment_game">
         <action
@@ -39,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/endFragment"
-        android:name="buu.informatics.s59160090.translateit.EndFragment"
+        android:name="buu.informatics.s59160090.translateit.end.EndFragment"
         android:label="EndFragment"
         tools:layout="@layout/fragment_end">
         <action
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/scoreFragment"
-        android:name="buu.informatics.s59160090.translateit.ScoreFragment"
+        android:name="buu.informatics.s59160090.translateit.score.ScoreFragment"
         android:label="ScoreFragment"
         tools:layout="@layout/fragment_score">
         <action
@@ -61,6 +61,6 @@
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="buu.informatics.s59160090.translateit.AboutFragment"
+        android:name="buu.informatics.s59160090.translateit.about.AboutFragment"
         android:label="AboutFragment" />
 </navigation>

@@ -1,4 +1,4 @@
-package buu.informatics.s59160090.translateit
+package buu.informatics.s59160090.translateit.end
 
 
 import android.content.Intent
@@ -7,15 +7,20 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
+import buu.informatics.s59160090.translateit.R
 import buu.informatics.s59160090.translateit.databinding.FragmentEndBinding
-import buu.informatics.s59160090.translateit.databinding.FragmentGameBinding
+import buu.informatics.s59160090.translateit.database.Users
+import buu.informatics.s59160090.translateit.database.DatabaseHandler
+import kotlinx.android.synthetic.main.fragment_end.*
+
+
 
 /**
  * A simple [Fragment] subclass.
  */
 class EndFragment : Fragment() {
+    var dbHandler: DatabaseHandler? = null
     var finalScore = ""
 
     private lateinit var binding: FragmentEndBinding
@@ -23,17 +28,43 @@ class EndFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentEndBinding>(inflater,
             R.layout.fragment_end,container,false)
-        binding.menuButton2.setOnClickListener {view : View ->
-            view.findNavController().navigate(R.id.action_endFragment_to_mainMenuFragment2)
-        }
         val args = EndFragmentArgs.fromBundle(arguments!!)
         finalScore = args.score.toString()
+
+        binding.menuButton2.setOnClickListener {view : View ->
+            val user: Users = Users()
+            var success: Boolean = false
+//            if (nameInput.text.toString().equals("")){
+//                user.name = " "
+//                user.score = args.score
+//
+//                success = dbHandler!!.addUser(user)
+//
+//                if (success){
+//                    Toast.makeText(context,"Saved Successfully1", Toast.LENGTH_LONG).show()
+//                }
+//            }else{
+                user.name = nameInput.text.toString()
+                user.score = args.score
+
+                success = dbHandler!!.addUser(user)
+
+                if (success){
+                    Toast.makeText(context,"Saved Successfully", Toast.LENGTH_LONG).show()
+                }
+//            }
+
+            view.findNavController().navigate(R.id.action_endFragment_to_mainMenuFragment2)
+        }
+
         Toast.makeText(context, "Your Score is ${args.score}", Toast.LENGTH_LONG).show()
         binding.end = this
         setHasOptionsMenu(true)
+        dbHandler = DatabaseHandler(getActivity())
         return binding.root
     }
 

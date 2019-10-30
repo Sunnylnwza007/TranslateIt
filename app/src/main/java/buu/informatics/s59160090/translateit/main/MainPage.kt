@@ -1,13 +1,12 @@
-package buu.informatics.s59160090.translateit
+package buu.informatics.s59160090.translateit.main
 
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import buu.informatics.s59160090.translateit.R
 import buu.informatics.s59160090.translateit.databinding.FragmentMainPageBinding
 
 class MainPage : Fragment() {

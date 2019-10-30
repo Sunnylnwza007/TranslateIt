@@ -7,7 +7,7 @@
 
         <variable
             name="game"
-            type="buu.informatics.s59160090.translateit.GameViewModel" />
+            type="buu.informatics.s59160090.translateit.game.GameViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

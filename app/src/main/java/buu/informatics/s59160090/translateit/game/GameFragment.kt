@@ -1,24 +1,18 @@
-package buu.informatics.s59160090.translateit
+package buu.informatics.s59160090.translateit.game
 
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
-import android.text.format.DateUtils
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
-import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModelProviders
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import buu.informatics.s59160090.translateit.game.GameFragmentDirections
+import buu.informatics.s59160090.translateit.R
 import buu.informatics.s59160090.translateit.databinding.FragmentGameBinding
-import kotlin.math.log
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -103,7 +97,10 @@ class GameFragment : Fragment() {
     }
     private fun gameFinished() {
         //view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToEndFragment2(viewModel.score))
-        val action = GameFragmentDirections.actionGameFragmentToEndFragment2(viewModel.score)
+        val action =
+            GameFragmentDirections.actionGameFragmentToEndFragment2(
+                viewModel.score
+            )
         NavHostFragment.findNavController(this).navigate(action)
         viewModel.onGameFinishComplete()
     }

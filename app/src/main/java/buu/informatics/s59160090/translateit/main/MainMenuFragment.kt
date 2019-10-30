@@ -1,4 +1,4 @@
-package buu.informatics.s59160090.translateit
+package buu.informatics.s59160090.translateit.main
 
 
 import android.os.Bundle
@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import buu.informatics.s59160090.translateit.R
 import buu.informatics.s59160090.translateit.databinding.FragmentMainMenuBinding
 
 /**
@@ -19,7 +20,7 @@ class MainMenuFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
        binding = DataBindingUtil.inflate<FragmentMainMenuBinding>(inflater,
-            R.layout.fragment_main_menu,container,false)
+           R.layout.fragment_main_menu,container,false)
 
         binding.playButton.setOnClickListener {view : View ->
             view.findNavController().navigate(R.id.action_mainMenuFragment_to_gameFragment2)
