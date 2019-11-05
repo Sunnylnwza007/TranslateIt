@@ -41,6 +41,9 @@
             app:destination="@id/endFragment"
             app:popUpTo="@+id/mainMenuFragment"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="score"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/endFragment"

@@ -3,16 +3,20 @@ package buu.informatics.s59160090.translateit.end
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import buu.informatics.s59160090.translateit.R
+import buu.informatics.s59160090.translateit.database.User
+import buu.informatics.s59160090.translateit.database.UserDatabase
+
+
 import buu.informatics.s59160090.translateit.databinding.FragmentEndBinding
-import buu.informatics.s59160090.translateit.database.Users
-import buu.informatics.s59160090.translateit.database.DatabaseHandler
-import kotlinx.android.synthetic.main.fragment_end.*
+
 
 
 
@@ -20,51 +24,52 @@ import kotlinx.android.synthetic.main.fragment_end.*
  * A simple [Fragment] subclass.
  */
 class EndFragment : Fragment() {
-    var dbHandler: DatabaseHandler? = null
-    var finalScore = ""
+
+    private lateinit var viewModelFactory: EndViewModelFactory
 
     private lateinit var binding: FragmentEndBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        Log.i("GameFragment", "Called ViewModelProviders.of")
 
-        // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentEndBinding>(inflater,
             R.layout.fragment_end,container,false)
+        val application = requireNotNull(this.activity).application
         val args = EndFragmentArgs.fromBundle(arguments!!)
-        finalScore = args.score.toString()
+        val dataSource = UserDatabase.getInstance(application)?.UserDao
+        val viewModelFactory = dataSource?.let { EndViewModelFactory(it, application) }
+        val EndrViewModel =
+            ViewModelProviders.of(
+                this, viewModelFactory).get(EndViewModel::class.java)
+        EndrViewModel.score = args.score
+        EndrViewModel.finalScore = args.score.toString()
+
+        // Inflate the layout for this fragment
+
+
+
 
         binding.menuButton2.setOnClickListener {view : View ->
-            val user: Users = Users()
-            var success: Boolean = false
-//            if (nameInput.text.toString().equals("")){
-//                user.name = " "
-//                user.score = args.score
-//
-//                success = dbHandler!!.addUser(user)
-//
-//                if (success){
-//                    Toast.makeText(context,"Saved Successfully1", Toast.LENGTH_LONG).show()
-//                }
-//            }else{
-                user.name = nameInput.text.toString()
-                user.score = args.score
+            var newUser = User()
+            var text = binding.nameValue.getText().toString()
+            binding.invalidateAll()
+            EndrViewModel.name = text
+            newUser.name = EndrViewModel.name
+            Log.i("end","${EndrViewModel.name}")
 
-                success = dbHandler!!.addUser(user)
+            newUser.score = EndrViewModel.score
 
-                if (success){
-                    Toast.makeText(context,"Saved Successfully", Toast.LENGTH_LONG).show()
-                }
-//            }
-
+            EndrViewModel.callInsert(newUser)
             view.findNavController().navigate(R.id.action_endFragment_to_mainMenuFragment2)
         }
 
         Toast.makeText(context, "Your Score is ${args.score}", Toast.LENGTH_LONG).show()
-        binding.end = this
+        binding.end = EndrViewModel
+
         setHasOptionsMenu(true)
-        dbHandler = DatabaseHandler(getActivity())
+        binding.setLifecycleOwner(this)
         return binding.root
     }
 
